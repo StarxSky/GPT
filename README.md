@@ -8,14 +8,10 @@
    ███████          ████        █████████████████████               ███████
    █████████████████████        ███████                             ███████
    █████████████████████        ███████                             ███████
-
-
-
-
 ```
 
-Use Tensorflow2.7.0 Build OpenAI'GPT-2
-使用最新tensorflow2.7.0构建openai官方的GPT-2 NLP模型
+- Use Tensorflow2.7.0 Build OpenAI'GPT-2
+- 使用最新tensorflow2.7.0构建openai官方的GPT-2 NLP模型
 # Binder
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Xhs753/TF2_GPT-2/HEAD)
 
