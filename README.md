@@ -94,9 +94,12 @@ $ pyton pre_process.py --help
   --batch-size=32 \
   --learning-rate=5e-5
   --graph-mode=True
-
-
 ```
+
+
+
+
+
 
 # 模型架构
 ![/image](https://github.com/Xhs753/TF2_GPT-2/blob/main/%E7%AE%80%E4%BB%8B/GPT-2_Model.jpg)
