@@ -24,7 +24,7 @@ def sequence_gen(model_path, model_param, vocab, seq_len, temperature, top_k, to
 									   top_k=top_k,
 									   top_p=top_p,
 									   nucleus_sampling=nucleus_sampling)
-	print("Generated seq by model:- " + generated_seq)
+	print("<<<<<<<<<===================================Sample===================================>>>>>>>>>>>>>>\n\n " + generated_seq)
 
 
 if __name__ == "__main__":
