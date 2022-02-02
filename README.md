@@ -23,7 +23,7 @@
 - 实现对话后续将应用于FloatTech的Bot
 
 ## 食用方法
-
+### 是新手？[点这里](https://github.com/Xhs753/TF2_GPT-2/blob/main/%E7%AE%80%E4%BB%8B/Simple.md)
 ### Setting
 
 *  python >= 3.6
