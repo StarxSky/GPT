@@ -59,7 +59,7 @@ $ pyton pre_process.py --help
 ```
 
 
-###### 在任意数据上训练
+##### 在任意数据上训练
 
 ```
 >> python pre_process.py --data-dir=data_directory --vocab-size=32000
