@@ -20,7 +20,7 @@
 - 使用无监督技术
 - 拥有大量词汇量
 - 可实现续写
-- 实现对话后续将应用于FloatTech的Bot
+- 实现对话后续将应用于[FloatTech的Bot](https://github.com/FloatTech/AI-Bot/blob/main/TF2_GPT-2/README.md)
 
 ## 食用方法
 ### 是新手？[点这里](https://github.com/Xhs753/TF2_GPT-2/blob/main/%E7%AE%80%E4%BB%8B/Simple.md)
