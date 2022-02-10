@@ -6,7 +6,7 @@ UNKNOWN_ID = 1
 START_ID = 3
 END_ID = 4
 
-
+#加载词汇
 def load_vocab(vocab_path):
     vocab = collections.OrderedDict()
     index = 0
@@ -16,7 +16,7 @@ def load_vocab(vocab_path):
     inv_vocab = {v: k for k, v in vocab.items()}
     return vocab, inv_vocab
 
-
+#转换为词汇
 def convert_by_vocab(vocab, items):
     output = []
     for item in items:
@@ -24,18 +24,22 @@ def convert_by_vocab(vocab, items):
     return output
 
 
-def convert_tokens_to_ids(vocab, tokens): #令牌转换成id
+def convert_tokens_to_ids(vocab, tokens): 
+    #令牌转换成id
     return convert_by_vocab(vocab, tokens)
 
 
-def convert_ids_to_tokens(inv_vocab, ids): #id 转换成令牌
+def convert_ids_to_tokens(inv_vocab, ids): 
+    #id 转换成令牌
     return convert_by_vocab(inv_vocab, ids)
+
+
 
 
 def parse_example(serialized_example):
     data_fields = {
-        "inputs": tf.io.VarLenFeature(tf.int64),
-        "targets": tf.io.VarLenFeature(tf.int64)
+        "inputs": tf.io.VarLenFeature(tf.int64),#输入
+        "targets": tf.io.VarLenFeature(tf.int64)#目标
     }
     parsed = tf.io.parse_single_example(serialized_example, data_fields)
     inputs = tf.sparse.to_dense(parsed["inputs"])
