@@ -11,25 +11,25 @@ LOG_DIR = _ROOT + "/log"
 MODEL_DIR = _ROOT + "/model"
 
 
-
-num_layers = 8
-embedding_size = 768
-num_heads = 8
-dff =3072
-max_seq_len = 515 
-vocab_size = 24512
-optimizer = "adam"
-batch_size = 8
-learning_rate = 0.001
-graph_mode = False
-distributed = False
+#默认训练参数
+#num_layers = 8
+#embedding_size = 768
+#num_heads = 8
+#dff =3072
+#max_seq_len = 515 
+#vocab_size = 24512
+#optimizer = "adam"
+#batch_size = 8
+#learning_rate = 0.001
+#graph_mode = False
+#distributed = False
 
 
 
 
 #编写训练函数
-def train(num_layers, embedding_size, num_heads, dff, max_seq_len, vocab_size,
-          optimizer, batch_size, learning_rate, graph_mode, distributed):
+def train(num_layers = 8, embedding_size = 768, num_heads = 8, dff = 3072, max_seq_len = 515, vocab_size = 24512,
+          optimizer = "adam", batch_size = 8, learning_rate = 0.001, graph_mode = False, distributed = False):
 	par_map = {"num_layers": num_layers, "d_model": embedding_size,
 	           "num_heads": num_heads, "dff": dff,
 	           "max_seq_len": max_seq_len, "vocab_size": vocab_size}
