@@ -1,7 +1,7 @@
 import glob
 import json
 
-import click
+
 
 from data_pipeline import input_fn
 from gpt2_model import *
@@ -11,18 +11,20 @@ LOG_DIR = _ROOT + "/log"
 MODEL_DIR = _ROOT + "/model"
 
 
-@click.command()
-@click.option('--num-layers', type=int, default=8, show_default=True, help="No. of decoder layers")
-@click.option('--embedding-size', type=int, default=768, show_default=True, help="Embedding size")
-@click.option('--num-heads', type=int, default=8, show_default=True, help="Number of heads")
-@click.option('--dff', type=int, default=3072, show_default=True, help="Filter Size")
-@click.option('--max-seq-len', type=int, default=515, show_default=True, help="Seq length")
-@click.option('--vocab-size', type=int, default=24512, show_default=True, help="Vocab size")
-@click.option('--optimizer', type=str, default="adam", show_default=True, help="optimizer type")
-@click.option('--batch-size', type=int, default=8, show_default=True, help="optimizer type")
-@click.option('--learning-rate', type=float, default=0.001, show_default=True, help="learning rate")
-@click.option('--graph-mode', type=bool, default=False, show_default=False, help="TF run mode")
-@click.option('--distributed', type=bool, default=False, show_default=False, help="distributed training")
+
+num_layers = 8
+embedding_size = 768
+num_heads = 8
+dff =3072
+max_seq_len = 515 
+vocab_size = 24512
+optimizer = "adam"
+batch_size = 8
+learning_rate = 0.001
+graph_mode = False
+distributed = False
+
+
 
 
 #编写训练函数
