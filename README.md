@@ -12,6 +12,7 @@
 
 - Use Tensorflow2.7.0 / Pytorch Build OpenAI'GPT-2
 - 使用最新tensorflow2.7.0 / pytorch构建openai官方的GPT-2 NLP模型
+
 # Binder
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/StarxSky/TF2_GPT-2/HEAD)
 
@@ -28,7 +29,9 @@
 - 实现对话后续将应用于[FloatTech的Bot](https://github.com/FloatTech/AI-Bot/blob/main/GPT-2/README.md)
 
 ## 食用方法
-### 是新手？[点这里](https://github.com/StarxSky/GPT-2/blob/main/%E7%AE%80%E4%BB%8B/Simple.md)
+### （TensorFlow）TF2_GPT-2生成英文文章的教程[点这里](https://github.com/StarxSky/GPT-2/blob/main/%E7%AE%80%E4%BB%8B/TF2_GPT-2.md)
+### (Pytorch) 如果想训练中文GPT-2请您移步至[CNGPT](https://github.com/StarxSky/GPT-2/tree/main/CNGPT)
+
 ### Setting
 
 *  python >= 3.6
