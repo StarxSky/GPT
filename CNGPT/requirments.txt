@@ -1,0 +1,7 @@
+torch
+torchvision
+jieba
+numpy
+logging
+tqdm
+math
