@@ -8,7 +8,7 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/StarxSky/TF2_GPT-2/HEAD)
 
 ### NEW!! 2022/3/15
-- 新增[CNGPT](https://github.com/StarxSky/GPT-2/CNGPT)可以实现在中文数据集上运行GPT
+- 新增[CNGPT](https://github.com/StarxSky/GPT-2/tree/main/CNGPT)可以实现在中文数据集上运行GPT
 - 由Torch重构
 
 
