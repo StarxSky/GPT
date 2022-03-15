@@ -1,14 +1,5 @@
 # GPT-2
-```
-   █████████████████████        █████████████████████        █████████████████████
-   █████████████████████        █████████████████████          █████████████████
-   ███████                      ███████       ███████               ███████
-   ███████    ██████████        ███████       ███████               ███████
-   ███████      ████████        █████████████████████               ███████
-   ███████          ████        █████████████████████               ███████
-   █████████████████████        ███████                             ███████
-   █████████████████████        ███████                             ███████
-```
+![Pytorch](https://avatars.githubusercontent.com/u/21003710?s=88&v=4) ![TensorFlow](https://avatars.githubusercontent.com/u/15658638?s=88&v=4)
 
 - Use Tensorflow2.7.0 / Pytorch Build OpenAI'GPT-2
 - 使用最新tensorflow2.7.0 / pytorch构建openai官方的GPT-2 NLP模型
@@ -16,7 +7,7 @@
 # Binder
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/StarxSky/TF2_GPT-2/HEAD)
 
-### NEW!!
+### NEW!! 2022/3/15
 - 新增[CNGPT](https://github.com/StarxSky/GPT-2/CNGPT)可以实现在中文数据集上运行GPT
 - 由Torch重构
 
