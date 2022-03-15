@@ -5,7 +5,7 @@
 - 使用最新tensorflow2.7.0 / pytorch构建openai官方的GPT-2 NLP模型
 
 # Binder
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/StarxSky/TF2_GPT-2/HEAD)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/StarxSky/GPT-2/HEAD)
 
 ### NEW!! 2022/3/15
 - 新增[CNGPT](https://github.com/StarxSky/GPT-2/tree/main/CNGPT)可以实现在中文数据集上运行GPT
@@ -17,7 +17,7 @@
 - 使用无监督技术
 - 拥有大量词汇量
 - 可实现续写
-- 实现对话后续将应用于[FloatTech的Bot](https://github.com/FloatTech/AI-Bot/blob/main/GPT-2/README.md)
+- 实现对话后续将应用于[FloatTech的Bot](https://github.com/FloatTech/AI-Bot/blob/main/TF2_GPT-2/README.md)
 
 ## 食用方法
 ### （TensorFlow）TF2_GPT-2生成英文文章的教程[点这里](https://github.com/StarxSky/GPT-2/blob/main/%E7%AE%80%E4%BB%8B/TF2_GPT-2.md)
