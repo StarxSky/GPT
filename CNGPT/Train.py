@@ -19,7 +19,8 @@ Sample = utils.sample#示例
 
 
 # 分词
-path = 'C:\\Users\\xbj0916\\Desktop\\CNGPT\\data\\tai.txt'
+path = 'datas/train.text'#linux
+path = 'datas\\train.text'#windows
 f = open(path,encoding='utf-8').read()
 aa = jieba.lcut(f)
 print(aa)
