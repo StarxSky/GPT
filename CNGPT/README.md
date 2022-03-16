@@ -35,8 +35,35 @@ tconf = Trainerconfig(max_epochs=1, batch_size=256)
 trainer = Trainer(model, train_dataset, test_dataset=None, config=tconf, Save_Model_path='C:\\Users\\xbj0916\\Desktop\\M')
 trainer.train()
 ```
-- 运行！
+- 运行训练！
 ```
     >>> 进入CNGPT目录下
     >>> python train.py 
+    
+```
+
+## 生成文章
+```
+    >>>生成文章
+    >>>python pre.py
+```
+- 如果想要更改生成文章的字数可以修改pre.py中的"steps="
+
+```python
+x = torch.tensor([train_dataset.stoi[s] for s in context], dtype=torch.long)[None,...] # context conditioning
+y = Sample(model, x, steps=100, temperature=1.0, sample=True, top_k=10)[0]
+print(y)
+print('==============================DONE=================================')
+
+```
+
+
+### 生成文章时遇到的问题
+- 当出现：RuntimeError: Attempting to deserialize object on a CUDA device but torch.cuda.is_available() is False. If you are running on a CPU-only machine, please use torch.load with map_location=torch.device('cpu') to map your storages to the CPU.时尝试修改pre.py中的以下代码片段
+- 原因是由于模型使用CUDA训练的而您的设备不支持CUDA
+```python
+model.load_state_dict(torch.load(model_path,map_location='cpu'))
+#当出现 RuntimeError: Attempting to deserialize object on a CUDA device but torch.cuda.is_available() is False. If you are running on a CPU-only machine, please use torch.load with map_location=torch.device('cpu') to map your storages to the CPU.使用下方的方法将其添加到加载模型的语句中
+#map_location=cpu
+
 ```
