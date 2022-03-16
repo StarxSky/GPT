@@ -33,10 +33,10 @@ mconf = GPTconfig(train_dataset.vocab_size,train_dataset.block_size, n_layer=12,
 model = GPT(config = mconf)
 print(model)
 
-
+print("==============================START TRAIN=================================")
 
 # 构建一个训练器
-tconf = Trainerconfig(max_epochs=1, batch_size=256)
+tconf = Trainerconfig(max_epochs=20, batch_size=256)
 trainer = Trainer(model, train_dataset, test_dataset=None, config=tconf, Save_Model_path='C:\\Users\\xbj0916\\Desktop\\M')
 trainer.train()
 
