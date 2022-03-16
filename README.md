@@ -10,6 +10,7 @@
 ### NEW!! 2022/3/15
 - 新增[CNGPT](https://github.com/StarxSky/GPT-2/tree/main/CNGPT)可以实现在中文数据集上运行GPT
 - 由Torch重构
+![im](https://github.com/StarxSky/GPT-2/blob/main/%E7%AE%80%E4%BB%8B/h.png?raw=true)
 
 
 ## 优点
