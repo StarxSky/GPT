@@ -41,6 +41,17 @@ trainer.train()
     >>> python train.py 
     
 ```
+### 使用预训练的模型
+- 下载预训练模型[Download](https://drive.google.com/file/d/133ERymhZejMj3aKwJLcLadMLUy0cw43w/view?usp=sharing)
+- 您需要更改模型存放的位置路径，请参考以下代码：将您所下载的模型路径放到model_path中（文件为：pre.py)
+```python
+#模型的地址
+model_path = '/content/drive/MyDrive/ColabNotebooks/CNGPT/Models/model.bin'
+#训练数据的地址
+path = '/content/drive/MyDrive/ColabNotebooks/CNGPT/datas/train.text'#linux
+
+
+```
 
 ## 生成文章
 ```
@@ -60,7 +71,7 @@ print('==============================DONE=================================')
 
 ### 生成文章时遇到的问题
 - 当出现：RuntimeError: Attempting to deserialize object on a CUDA device but torch.cuda.is_available() is False. If you are running on a CPU-only machine, please use torch.load with map_location=torch.device('cpu') to map your storages to the CPU.时尝试修改pre.py中的以下代码片段
-- 原因是由于模型使用CUDA训练的而您的设备不支持CUDA
+- 原因是由于所下载的预训练模型使用CUDA训练的而您的设备不支持CUDA
 ```python
 model.load_state_dict(torch.load(model_path,map_location='cpu'))
 #当出现 RuntimeError: Attempting to deserialize object on a CUDA device but torch.cuda.is_available() is False. If you are running on a CPU-only machine, please use torch.load with map_location=torch.device('cpu') to map your storages to the CPU.使用下方的方法将其添加到加载模型的语句中
