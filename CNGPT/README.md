@@ -1,6 +1,11 @@
 # 使用Pytorch构建的GPT-2训练中文语料
 ![pytorch logo](https://avatars.githubusercontent.com/u/21003710?s=88&v=4)
+
+# 建议在Colab上使用GPU跑代码
+![im](https://github.com/StarxSky/GPT-2/blob/main/%E7%AE%80%E4%BB%8B/pp.png?raw=true)
+
 ## 使用方法
+
 - 安装必要的包
 - Tips1:
 ```
@@ -54,6 +59,7 @@ path = '/content/drive/MyDrive/ColabNotebooks/CNGPT/datas/train.text'#linux
 ```
 
 ## 生成文章
+![m](https://github.com/StarxSky/GPT-2/blob/main/%E7%AE%80%E4%BB%8B/h.png?raw=true)
 ```
     >>>生成文章
     >>>python pre.py
