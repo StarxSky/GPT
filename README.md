@@ -4,9 +4,9 @@
 - Use Tensorflow2.7.0 / Pytorch Build OpenAI'GPT-2
 - 使用最新tensorflow2.7.0 / pytorch构建openai官方的GPT-2 NLP模型
 
-# Binder
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/StarxSky/GPT-2/HEAD)
-
+# Binder & Colab
+- [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/StarxSky/GPT-2/HEAD)
+- [Colab](https://colab.research.google.com/)
 ### NEW!! 2022/3/15
 - 新增[CNGPT](https://github.com/StarxSky/GPT-2/tree/main/CNGPT)可以实现在中文数据集上运行GPT
 - 由Torch重构
