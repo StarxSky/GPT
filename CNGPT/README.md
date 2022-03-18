@@ -64,15 +64,6 @@ path = '/content/drive/MyDrive/ColabNotebooks/CNGPT/datas/train.text'#linux
     >>>生成文章
     >>>python pre.py
 ```
-- 如果想要更改生成文章的字数可以修改pre.py中的"steps="
-
-```python
-x = torch.tensor([train_dataset.stoi[s] for s in context], dtype=torch.long)[None,...] # context conditioning
-y = Sample(model, x, steps=100, temperature=1.0, sample=True, top_k=10)[0]
-print(y)
-print('==============================DONE=================================')
-
-```
 
 
 ### 生成文章时遇到的问题
