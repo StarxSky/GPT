@@ -38,6 +38,7 @@ print("==============================STARTN=================================")
 
 
 model.load_state_dict(torch.load(model_path,map_location='cpu'))
+print("Model was Load Done!")
 #当出现 RuntimeError: Attempting to deserialize object on a CUDA device but torch.cuda.is_available() is False. If you are running on a CPU-only machine, please use torch.load with map_location=torch.device('cpu') to map your storages to the CPU.使用下方的方法将其添加到加载模型的语句中
 #map_location=cpu
 
