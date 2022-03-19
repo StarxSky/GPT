@@ -22,17 +22,21 @@
 ```
 
 
-- 在这之前您需要改动一下训练数据的存放地址 path
+- 在这之前您需要预先将所要训练的数据提前放到```datas```目录下
 
 ```python
+#######功能实现代码：
+train_name = str(input("\nplease inputs your datas:\n请输入您的要训练的数据:"))
+
 # 分词
-path = 'datas/train.text'#linux
-path = 'datas\\train.text'#windows
-f = open(path,encoding='utf-8').read()
+path_ = os.path.join('datas',train_name)
+
+f = open(path_,encoding='utf-8').read()
 aa = jieba.lcut(f)
 print(aa)
 
 ```
+
 - 这里的路径用来指定文件夹存放log
 ```python
 # 构建一个训练器
@@ -43,7 +47,7 @@ trainer.train()
 - 运行训练！
 ```
     >>> 进入CNGPT目录下
-    >>> python train.py 
+    >>> python Train.py 
     
 ```
 ### 使用预训练的模型
