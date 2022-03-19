@@ -1,5 +1,6 @@
 import torch
 import jieba
+import os 
 import numpy as np
 
 from Dtasest import MyDataset
@@ -15,14 +16,15 @@ Trainerconfig = Config.TrainerConfig#训练配置
 Sample = utils.sample#示例
 
 #模型的地址
-model_path = '/content/drive/MyDrive/ColabNotebooks/CNGPT/Models/model.bin'
-#训练数据的地址
-path = '/content/drive/MyDrive/ColabNotebooks/CNGPT/datas/train.text'#linux
+model_path = str(input("请输入预训练模型的名称在这之前请您确保下载了模型并且确保模型在Pre_models目录下："))
+pre_model_path = os.path.join('Pre_models',model_path)
 
+#训练数据的地址
+train_name = str(input("\nplease inputs your datas:\n请输入您的要训练的数据:"))
 
 # 分词
-#path = 'datas\\train.text'#windows
-f = open(path,encoding='utf-8').read()
+path_ = os.path.join('datas',train_name)
+f = open(path_,encoding='utf-8').read()
 aa = jieba.lcut(f)
 print(aa)
 
@@ -34,10 +36,10 @@ mconf = GPTconfig(train_dataset.vocab_size,train_dataset.block_size, n_layer=12,
 model = GPT(config = mconf)
 print(model)
 
-print("==============================STARTN=================================")
+print("{}STARTN{}".format("=="*19,"=="*19))
 
 
-model.load_state_dict(torch.load(model_path,map_location='cpu'))
+model.load_state_dict(torch.load(pre_model_path,map_location='cpu'))
 print("Model was Load Done!")
 #当出现 RuntimeError: Attempting to deserialize object on a CUDA device but torch.cuda.is_available() is False. If you are running on a CPU-only machine, please use torch.load with map_location=torch.device('cpu') to map your storages to the CPU.使用下方的方法将其添加到加载模型的语句中
 #map_location=cpu
@@ -54,5 +56,3 @@ print(y)
 print('==============================DONE=================================')
 completion = ''.join([train_dataset.itos[int(i)] for i in y])
 print(completion)
-
-
