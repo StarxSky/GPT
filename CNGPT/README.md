@@ -44,6 +44,7 @@ tconf = Trainerconfig(max_epochs=1, batch_size=256)
 trainer = Trainer(model, train_dataset, test_dataset=None, config=tconf, Save_Model_path='C:\\Users\\xbj0916\\Desktop\\M')
 trainer.train()
 ```
+
 - 运行训练！
 ```
     >>> 进入CNGPT目录下
@@ -52,14 +53,17 @@ trainer.train()
 ```
 ### 使用预训练的模型
 - 下载预训练模型[Download](https://drive.google.com/file/d/133ERymhZejMj3aKwJLcLadMLUy0cw43w/view?usp=sharing)
-- 您需要更改模型存放的位置路径，请参考以下代码：将您所下载的模型路径放到model_path中（文件为：pre.py)
+- 您需要将所下载的预训练模型或者已训练好的模型提前放置在```Pre_models```目录下
+- 注意！！您用哪种文本语料训练的CNGPT您就需要把您的语料路径填写进去！！(默认的语料库是```datas```中的```train.text```，因此，如果您确定默认的话请您将训练的数据填写```train.text```)
+
 ```python
 #模型的地址
-model_path = '/content/drive/MyDrive/ColabNotebooks/CNGPT/Models/model.bin'
+model_path = str(input("请输入预训练模型的名称在这之前请您确保下载了模型并且确保模型在Pre_models目录下："))
+pre_model_path = os.path.join('Pre_models',model_path)
+
 #训练数据的地址
-path = '/content/drive/MyDrive/ColabNotebooks/CNGPT/datas/train.text'#linux
-
-
+train_name = str(input("\nplease inputs your datas:\n请输入您的要训练的数据:"))
+path_ = os.path.join('datas',train_name)
 ```
 
 ## 生成文章
