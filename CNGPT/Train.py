@@ -21,7 +21,7 @@ Sample = utils.sample#示例
 
 #######功能实现代码：
 train_name = str(input("\nplease inputs your datas:\n请输入您的要训练的数据文件名:"))
-batch_size = str(input("\nplease inputs your batch_size:\n请输入您的要训练的batch_size这将取决于您数据集的大小(如果您不确定请输入20):"))
+batch_size = str(input("\nplease inputs your batch_size:\n请输入您的要训练的batch_size这将取决于您数据集的大小(如果您不确定请输入64):"))
 # 分词
 path_ = os.path.join('datas',train_name)
 f = open(path_,encoding='utf-8').read()
