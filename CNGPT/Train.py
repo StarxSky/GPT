@@ -18,12 +18,14 @@ Sample = utils.sample#示例
 
 
 
+#######功能实现代码：
+train_name = str(input("\nplease inputs your datas:\n请输入您的要训练的数据:"))
 # 分词
-path = 'datas/train.text'#linux
-path = 'datas\\train.text'#windows
-f = open(path,encoding='utf-8').read()
+path_ = os.path.join('datas',train_name)
+f = open(path_,encoding='utf-8').read()
 aa = jieba.lcut(f)
 print(aa)
+
 
 
 
