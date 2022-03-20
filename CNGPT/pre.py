@@ -20,7 +20,7 @@ model_path = str(input("请输入预训练模型的名称在这之前请您确�
 pre_model_path = os.path.join('Pre_models',model_path)
 
 #训练数据的地址
-train_name = str(input("\nplease inputs your datas:\n请输入您的要训练的数据:"))
+train_name = str(input("\nplease inputs your datas:\n请输入您训练模型的数据:"))
 
 # 分词
 path_ = os.path.join('datas',train_name)
@@ -53,6 +53,6 @@ steps = int(input("输入生成的字数："))
 x = torch.tensor([train_dataset.stoi[s] for s in context], dtype=torch.long)[None,...] # context conditioning
 y = Sample(model, x, steps=steps, temperature=1.0, sample=True, top_k=10)[0]
 print(y)
-print('==============================DONE=================================')
+print('{}DONE{}'.format("=="*19,"=="*19))
 completion = ''.join([train_dataset.itos[int(i)] for i in y])
 print(completion)
