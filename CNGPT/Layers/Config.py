@@ -140,7 +140,7 @@ class Trainer:
 
         best_loss = float('inf')
         self.tokens = 0 # counter used for learning rate decay
-        for epoch in tqdm.tqdm(range(config.max_epochs)):
+        for epoch in range(config.max_epochs):
 
             run_epoch('train')
             if self.test_dataset is not None:
