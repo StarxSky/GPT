@@ -44,7 +44,15 @@ tconf = Trainerconfig(max_epochs=1, batch_size=256)
 trainer = Trainer(model, train_dataset, test_dataset=None, config=tconf, Save_Model_path='C:\\Users\\xbj0916\\Desktop\\M')
 trainer.train()
 ```
-
+- 进行微调
+  - ```block_size``` :只能关注前面词的数量
+```python
+# 构建 GPT 模型
+train_dataset = MyDataset(aa,20)block_size = 20 
+mconf = GPTconfig(train_dataset.vocab_size,train_dataset.block_size, n_layer=12, n_head=12, n_embd=768) # a GPT-1
+model = GPT(config = mconf)
+print(model)
+```
 - 运行训练！
 ```
     >>> 进入CNGPT目录下
