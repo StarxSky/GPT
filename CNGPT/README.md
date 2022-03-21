@@ -87,11 +87,15 @@ path_ = os.path.join('datas',train_name)
 
 
 ### 生成文章时遇到的问题
-- 当出现：RuntimeError: Attempting to deserialize object on a CUDA device but torch.cuda.is_available() is False. If you are running on a CPU-only machine, please use torch.load with map_location=torch.device('cpu') to map your storages to the CPU.时尝试修改pre.py中的以下代码片段
+- 当出现：RuntimeError: Attempting to deserialize object on a CUDA device but torch.cuda.is_available() is False. If you are running on a CPU-only machine, please use torch.load with map_location=torch.device('cpu') to map your storages to the CPU.
 - 原因是由于所下载的预训练模型使用CUDA训练的而您的设备不支持CUDA
 ```python
-model.load_state_dict(torch.load(model_path,map_location='cpu'))
-#当出现 RuntimeError: Attempting to deserialize object on a CUDA device but torch.cuda.is_available() is False. If you are running on a CPU-only machine, please use torch.load with map_location=torch.device('cpu') to map your storages to the CPU.使用下方的方法将其添加到加载模型的语句中
-#map_location=cpu
+# CUDA确认
+GPU = bool(input("请确认您是否有CUDA(Yes:True,None:False)："))
+if GPU == True :
+  model.load_state_dict(torch.load(pre_model_path))
+else :
+  model.load_state_dict(torch.load(pre_model_path,map_location='cpu'))
+
 
 ```
