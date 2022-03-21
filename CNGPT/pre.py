@@ -21,7 +21,8 @@ pre_model_path = os.path.join('Pre_models',model_path)
 
 #训练数据的地址
 train_name = str(input("\nplease inputs your datas:\n请输入您训练模型的数据:"))
-
+# CUDA确认
+GPU = bool(input("请确认您是否有CUDA(Yes:True,None:False)："))
 # 分词
 path_ = os.path.join('datas',train_name)
 f = open(path_,encoding='utf-8').read()
@@ -38,8 +39,11 @@ print(model)
 
 print("{}STARTN{}".format("=="*19,"=="*19))
 
+if GPU == True :
+  model.load_state_dict(torch.load(pre_model_path))
+else :
+  model.load_state_dict(torch.load(pre_model_path,map_location='cpu'))
 
-model.load_state_dict(torch.load(pre_model_path,map_location='cpu'))
 print("Model was Load Done!")
 #当出现 RuntimeError: Attempting to deserialize object on a CUDA device but torch.cuda.is_available() is False. If you are running on a CPU-only machine, please use torch.load with map_location=torch.device('cpu') to map your storages to the CPU.使用下方的方法将其添加到加载模型的语句中
 #map_location=cpu
