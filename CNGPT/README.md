@@ -60,7 +60,11 @@ print(model)
     
 ```
 ### 使用预训练的模型
-- 下载预训练模型[Download](https://drive.google.com/file/d/133ERymhZejMj3aKwJLcLadMLUy0cw43w/view?usp=sharing)
+|下载预训练模型
+|------------------
+| [DOWNLOAD 370MB](https://drive.google.com/file/d/133ERymhZejMj3aKwJLcLadMLUy0cw43w/view?usp=sharing)
+| [DOWNLOAD 2.43GB](https://drive.google.com/file/d/1WyzkpDFlztRrG9nHqW0W1A29bX7VjIJM/view?usp=sharing)
+
 - 您需要将所下载的预训练模型或者已训练好的模型提前放置在```Pre_models```目录下
 - 注意！！您用哪种文本语料训练的CNGPT您就需要把您的语料路径填写进去！！(默认的语料库是```datas```中的```train.text```，因此，如果您确定默认的话请您将训练的数据填写```train.text```)
 
