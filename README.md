@@ -1,7 +1,7 @@
 # GPT-2
 ![Pytorch](https://avatars.githubusercontent.com/u/21003710?s=88&v=4) ![TensorFlow](https://avatars.githubusercontent.com/u/15658638?s=88&v=4)
 
-- [![Build Status for Main](https://dev.azure.com/a15615183325/CNGPT/_apis/build/status/a15615183325.CNGPT?branchName=main)](https://dev.azure.com/a15615183325/CNGPT/_build/latest?definitionId=4&branchName=main)
+- [![Build Status for Main](https://dev.azure.com/a15615183325/CNGPT/_apis/build/status/a15615183325.CNGPT?branchName=main)](https://dev.azure.com/a15615183325/e975f191-5368-44d5-a037-90aeb700f792/_build/results?buildId=37&view=logs&j=d7d66435-5ae4-561a-5876-2cd4e19b3ce2)
 - Use Tensorflow2.7.0 / Pytorch Build OpenAI'GPT-2
 - 使用最新tensorflow2.7.0 / pytorch构建openai官方的GPT-2 NLP模型
 
