@@ -3,11 +3,6 @@
 - Use Tensorflow2.7.0 / Pytorch Build OpenAI'GPT-2
 - 使用最新tensorflow2.7.0 / pytorch构建openai官方的GPT-2 NLP模型
 
-## AzurePiplines
-
-- [![Build Status](https://dev.azure.com/MERTECH/GPT-2-AppleMac/_apis/build/status/GPT-2-AppleMac?branchName=main)](https://dev.azure.com/MERTECH/GPT-2-AppleMac/_build/latest?definitionId=7&branchName=main)
-
-- [![Build Status](https://dev.azure.com/MERTECH/CNGPT/_apis/build/status/CNGPT?branchName=main)](https://dev.azure.com/MERTECH/CNGPT/_build/latest?definitionId=4&branchName=main)
 
 # Binder & Colab
 - [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/StarxSky/GPT-2/HEAD)
