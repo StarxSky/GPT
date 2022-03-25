@@ -3,17 +3,18 @@ import jieba
 import os 
 import numpy as np
 
-from Dtasest import MyDataset
-from Layers import Config
-from Layers import utils
-from Layers.Model import GPT_Model
+from Core.Datasets import MyDataset
+from Core import CONFIG
+from Core import Function
+from Core.Model import GPT_Model
 
 
 GPT = GPT_Model#模型
-GPTconfig = Config.GPTConfig#模型配置
-Trainer = Config.Trainer#模型训练器
-Trainerconfig = Config.TrainerConfig#训练配置
-Sample = utils.sample#示例
+GPTconfig = CONFIG.GPTConfig#模型配置
+Trainer = CONFIG.Trainer#模型训练器
+Trainerconfig = CONFIG.TrainerConfig#训练配置
+Sample = Function.sample#示例
+
 
 #模型的地址
 model_path = str(input("请输入预训练模型的名称在这之前请您确保下载了模型并且确保模型在Pre_models目录下："))
