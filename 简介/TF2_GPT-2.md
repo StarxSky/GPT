@@ -3,14 +3,14 @@
 
 - 本教程只展示了使用预先训练的数据生成文本
 - 此GPT由Tensorflow2构建只能训练英文语料！
-- 如果想训练中文GPT-2请您移步至[CNGPT](https://github.com/StarxSky/GPT-2/tree/main/CNGPT)
-- 本教程不包括[CNGPT](https://github.com/StarxSky/GPT-2/tree/main/CNGPT)
+- 如果想训练中文GPT-2请您移步至[CNGPT](https://github.com/StarxSky/GPT/tree/main/CNGPT)
+- 本教程不包括[CNGPT](https://github.com/StarxSky/GPT/tree/main/CNGPT)
 
 ## steps :
 
  ```
-1. git clone https://github.com/Xhs753/GPT-2
-2. $ cd GPT-2
+1. git clone https://github.com/Xhs753/GPT
+2. $ cd GPT/TF_GPT
 3. $ pip install -r requirments.txt
 4. $ python pre_process.py
 5. $ python train_gpt2.py
@@ -22,8 +22,8 @@
 #### Steps
 
 ```
-1. git clone https://github.com/StarxSky/GPT-2
-2. $ cd GPT-2
+1. git clone https://github.com/StarxSky/GPT
+2. $ cd GPT
 3. $ pip install -r requirments.txt
 
 ```
