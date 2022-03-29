@@ -1,6 +1,7 @@
 # GPT-2
 ![Pytorch](https://avatars.githubusercontent.com/u/21003710?s=88&v=4) ![TensorFlow](https://avatars.githubusercontent.com/u/15658638?s=88&v=4)
 - Use Tensorflow2.7.0 / Pytorch Build OpenAI'GPT-2
+- 使用Pytorch复现了OpenAI的iGPT模型
 - 使用最新tensorflow2.7.0 / pytorch构建openai官方的GPT-2 NLP模型
 
 
@@ -21,7 +22,8 @@
 - 实现对话后续将应用于[FloatTech的Bot](https://github.com/FloatTech/AI-Bot/blob/main/TF2_GPT-2/README.md)
 
 ## 食用方法
-### （TensorFlow）TF2_GPT-2生成英文文章的教程[点这里](https://github.com/StarxSky/GPT-2/blob/main/%E7%AE%80%E4%BB%8B/TF2_GPT-2.md)
+### (iGPT) Pytorch复现iGPT[点这里](https://github.com/StarxSky/GPT/blob/main/iGPT)
+### (TensorFlow）TF2_GPT-2生成英文文章的教程[点这里](https://github.com/StarxSky/GPT-2/blob/main/%E7%AE%80%E4%BB%8B/TF2_GPT-2.md)
 ### (Pytorch) 如果想训练中文GPT-2请您移步至[CNGPT](https://github.com/StarxSky/GPT-2/tree/main/CNGPT)
 
 ### Setting
@@ -45,7 +47,7 @@
 
 
 
-# LICENCE
+# [LICENCE](https://github.com/StarxSky/TF2_GPT-2/blob/main/LICENSE)
 
 ```
 ██████   ███   ███████       ██████          ██████████████████████
@@ -58,4 +60,4 @@
 ██████         ███████       ██████                  █████
 
 ```
-- [MIT](https://github.com/StarxSky/TF2_GPT-2/blob/main/LICENSE)
+
