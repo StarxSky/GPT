@@ -23,7 +23,7 @@ pre_model_path = os.path.join('Pre_models',model_path)
 GPU = bool(input("请确认您是否有CUDA(Yes:True,None:False)："))
 
 
-pp = str(input("输入您存放训练数据的文件夹目录："))
+pp = str(input("输入您存放训练数据的文件夹的名称："))
 ################
 
 def getFiles(dir, suffix): # 查找根目录，文件后缀 
@@ -38,7 +38,7 @@ def getFiles(dir, suffix): # 查找根目录，文件后缀
 
 
 txts = []
-for file in getFiles("datas", '.txt'):  # =>查找以.py结尾的文件
+for file in getFiles(pp, '.txt'):  # =>查找以.txt结尾的文件
        with open(file, "r",encoding='utf-8') as f: 
             
             #打开文件
