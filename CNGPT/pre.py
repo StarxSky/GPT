@@ -49,8 +49,6 @@ f = ''.join(txts)#转化为非数组类型
 
 
 # 分词
-path_ = os.path.join('datas',train_name)
-f = open(path_,encoding='utf-8').read()
 aa = jieba.lcut(f)
 print(aa)
 
