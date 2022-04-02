@@ -32,7 +32,7 @@ def getFiles(dir, suffix): # 查找根目录，文件后缀
 
   
 txts = []
-for file in getFiles("datas", '.txt'):  # =>查找以.txt结尾的文件
+for file in getFiles(pp, '.txt'):  # =>查找以.txt结尾的文件
        with open(file, "r",encoding='utf-8') as f: 
             
             #打开文件
