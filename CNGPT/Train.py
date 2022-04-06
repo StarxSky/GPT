@@ -53,6 +53,9 @@ print(aa)
 
 
 
+# 数据集将会给模型为size(Batch_size,Block_size)的数据进行分批训练，从而避免了一口气之下直接将所有数据放入模型导致内存爆炸
+# 使用Block_size来控制每批的数据长度一定也就是每批的数据特征值相同
+
 # 构建 GPT 模型
 train_dataset = MyDataset(aa,20)
 mconf = GPTconfig(train_dataset.vocab_size,train_dataset.block_size, n_layer=12, n_head=12, n_embd=768) # a GPT-1
@@ -66,6 +69,7 @@ print("{}START TRAIN{}".format(bar*19,bar*19))
 tconf = Trainerconfig(max_epochs=epochs, batch_size=batch_size)
 trainer = Trainer(model, train_dataset, test_dataset=None, config=tconf, Save_Model_path='C:\\Users\\xbj0916\\Desktop\\M')
 trainer.train()
+
 
 
 
