@@ -65,13 +65,30 @@ class MyDataset(torch.utils.data.Dataset):
 
 
 """
-import jieba
-import os
+Debug
 
-path_ = os.path.join('datas','a.txt')
+import os
+import jieba
+
+path_ = os.path.join('C:\\Users\\xbj0916\\Desktop\\CNGPT\\da\\s1.txt')
 f = open(path_,encoding='utf-8').read()
 aa = jieba.lcut(f)
 aa = ''.join(aa)
 # 构建 GPT 模型
-train_dataset = MyDataset(aa,20)
+train_dataset = MyDataset(aa,3)
+
+
+loader = torch.utils.data.DataLoader(train_dataset, shuffle=True, pin_memory=True,
+                                    batch_size=3,
+                                    num_workers=2)
+
+
+# tensor size(batch,block_size)
+if __name__ == '__main__': # 多线程程序要在主文件中运行
+
+    for i in loader :
+        print(i)
+
+
+
 """
