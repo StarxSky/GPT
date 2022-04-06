@@ -71,7 +71,7 @@ class GPT_Model(nn.Module):
         super(GPT_Model,self).__init__()
         # input embedding stem
         self.tok_emb = nn.Embedding(config.vocab_size, config.n_embd)
-        self.pos_emb = nn.Parameter(torch.zeros(1, config.block_size, config.n_embd))# 一维，大小为block_size和n_emd维度
+        self.pos_emb = nn.Parameter(torch.zeros(1, config.block_size, config.n_embd))
         self.drop1 = nn.Dropout(config.embd_pdrop)
         self.drop2 = nn.Dropout(0.5)
 
