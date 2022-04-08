@@ -14,7 +14,8 @@
 # 进度/News
 |进度
 |----------------------------------
-|新增[CNGPT](https://github.com/StarxSky/GPT-2/tree/main/CNGPT)可以实现在中文数据集上运行GPT -- 2022/3/15
+|增添了交互模式[CNGPT](https://github.com/StarxSky/GPT-2/tree/main/CNGPT) --2022/04/08
+|新增[CNGPT](https://github.com/StarxSky/GPT-2/tree/main/CNGPT)可以实现在中文数据集上运行GPT -- 2022/03/15
 
 
 |示例效果
