@@ -77,8 +77,14 @@ pre_model_path = os.path.join('Pre_models',model_path)
 train_name = str(input("\nplease inputs your datas:\n请输入您的要训练的数据:"))
 path_ = os.path.join('datas',train_name)
 ```
+# 交互模式
+```
+ >>> python interact.py
+```
 
-## 生成文章
+
+
+# 生成文章
 ![m](https://github.com/StarxSky/GPT-2/blob/main/%E7%AE%80%E4%BB%8B/h.png?raw=true)
 ```
     >>>生成文章
@@ -86,7 +92,7 @@ path_ = os.path.join('datas',train_name)
 ```
 
 
-### 生成文章时遇到的问题
+# 生成文章时遇到的问题
 - 当出现：RuntimeError: Attempting to deserialize object on a CUDA device but torch.cuda.is_available() is False. If you are running on a CPU-only machine, please use torch.load with map_location=torch.device('cpu') to map your storages to the CPU.
 - 原因是由于所下载的预训练模型使用CUDA训练的而您的设备不支持CUDA
 ```python
@@ -96,6 +102,24 @@ if GPU == True :
   model.load_state_dict(torch.load(pre_model_path))
 else :
   model.load_state_dict(torch.load(pre_model_path,map_location='cpu'))
+```
 
+### 如果报错key"xxx"
 
+- 这是由于数据集中没有这个词，请尝试将以下分词代码关掉，也就是直接将文本原始数据输入，不进行分词
+- 请尝试更换数据集或者更换一个您数据集中含有的词汇。
+
+```python
+txts = []
+for file in getFiles(pp, '.txt'):  # =>查找以.txt结尾的文件
+    with open(file, "r", encoding='utf-8') as f:
+        # 打开文件
+        data = f.read()  # 读取文件
+        txts.append(data)
+
+f = ''.join(txts)  # 转化为非数组类型
+
+# 分词
+aa = jieba.lcut(f)
+print(aa)
 ```
