@@ -81,7 +81,9 @@ path_ = os.path.join('datas',train_name)
 ```
  >>> python interact.py
 ```
-
+# 网页交互模式
+- 直接运行```webapp.py```即可。
+  - Dash application: A nice web interface for the dialogue model (Author: [xiejiachen](https://github.com/xiejiachen))
 
 
 # 生成文章
