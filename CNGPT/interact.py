@@ -90,21 +90,22 @@ def chat_response(raw_text):
 
 
 
-#while True:
-#    raw_text = str(input(">>> "))
-#    while not raw_text:
-#        print('Prompt should not be empty!')
-#        raw_text = input(">>> ")
-#    raw_text = " ".join(list(raw_text.replace(" ", "")))
+if __name__ == "__main__":
 
-#    x = torch.tensor([train_dataset.stoi[s] for s in raw_text], dtype=torch.long)[None, ...]
-#    history.append(x)
+    while True:
+        raw_text = str(input(">>> "))
+        while not raw_text:
+            print('Prompt should not be empty!')
+            raw_text = input(">>> ")
+        raw_text = " ".join(list(raw_text.replace(" ", "")))
+        x = torch.tensor([train_dataset.stoi[s] for s in raw_text], dtype=torch.long)[None, ...]
+        history.append(x)
 
-#    y = Sample(model, x, steps=steps, temperature=1.0, sample=True, top_k=10)[0]
-#    history.append(y)
+        y = Sample(model, x, steps=steps, temperature=1.0, sample=True, top_k=10)[0]
+        history.append(y)
 
-#    out_text = ''.join([train_dataset.itos[int(i)] for i in y])
-#    print(out_text)
+        out_text = ''.join([train_dataset.itos[int(i)] for i in y])
+        print(out_text)
 
 
 
