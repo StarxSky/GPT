@@ -1,5 +1,6 @@
-# 使用Pytorch构建的GPT-2训练中文语料
+# 使用Pytorch构建的GPT-2训练中文语料(建议您使用前请仔细查看此文档，从而解决问题)
 ![pytorch logo](https://avatars.githubusercontent.com/u/21003710?s=88&v=4)
+
 
 # 建议在Colab上使用GPU跑代码
 ![im](https://github.com/StarxSky/GPT-2/blob/main/%E7%AE%80%E4%BB%8B/pp.png?raw=true)
@@ -78,6 +79,28 @@ train_name = str(input("\nplease inputs your datas:\n请输入您的要训练的
 path_ = os.path.join('datas',train_name)
 ```
 # 交互模式
+
+- 前提要将```interact.py```的一下代码取消注释！！
+
+```python
+#while True:
+#    raw_text = str(input(">>> "))
+#    while not raw_text:
+#        print('Prompt should not be empty!')
+#        raw_text = input(">>> ")
+#    raw_text = " ".join(list(raw_text.replace(" ", "")))
+
+#    x = torch.tensor([train_dataset.stoi[s] for s in raw_text], dtype=torch.long)[None, ...]
+#    history.append(x)
+
+#    y = Sample(model, x, steps=steps, temperature=1.0, sample=True, top_k=10)[0]
+#    history.append(y)
+
+#    out_text = ''.join([train_dataset.itos[int(i)] for i in y])
+#    print(out_text)
+```
+
+
 ```
  >>> python interact.py
 ```
