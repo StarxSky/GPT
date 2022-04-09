@@ -1,6 +1,6 @@
 import os
 import torch
-import jieba
+#import jieba
 import numpy as np
 
 from Core.Datasets import MyDataset
@@ -45,11 +45,11 @@ for file in getFiles(pp, '.txt'):  # =>查找以.txt结尾的文件
 f = ''.join(txts)  # 转化为非数组类型
 
 # 分词
-aa = jieba.lcut(f)
-print(aa)
+#aa = jieba.lcut(f)
+#print(aa)
 
 # 构建 GPT 模型
-train_dataset = MyDataset(aa, 20)
+train_dataset = MyDataset(f, 20)
 mconf = GPTconfig(train_dataset.vocab_size, train_dataset.block_size, n_layer=12, n_head=12, n_embd=768)  # a GPT-1
 model = GPT(config=mconf)
 print(model)
