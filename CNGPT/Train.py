@@ -1,5 +1,5 @@
 import torch
-import jieba
+#import jieba
 import os
 import numpy as np
 
@@ -47,8 +47,8 @@ f = ''.join(txts)#转化为非数组类型
 
 batch_size = int(input("\nplease inputs your batch_size:\n请输入您的要训练的batch_size这将取决于您显存的大小(如果您不确定请输入20):"))
 epochs = int(input("\nEpochs:"))
-aa = jieba.lcut(f)
-print(aa)
+#aa = jieba.lcut(f)
+#print(aa)
 
 
 
@@ -57,7 +57,7 @@ print(aa)
 # 使用Block_size来控制每批的数据长度一定也就是每批的数据特征值相同
 
 # 构建 GPT 模型
-train_dataset = MyDataset(aa,20)
+train_dataset = MyDataset(f,20)
 mconf = GPTconfig(train_dataset.vocab_size,train_dataset.block_size, n_layer=12, n_head=12, n_embd=768) # a GPT-1
 model = GPT(config = mconf)
 print(model)
