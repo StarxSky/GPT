@@ -60,6 +60,16 @@ print(model)
     
 ```
 ### 使用预训练的模型
+
+- 因为预训练模型是使用jieba分词库训练的需要开启分词功能才能正常使用，否则会报错形状不匹配
+
+```python
+import jieba
+......
+aa = jieba.cut(f)
+train_dataset = MyDataset(aa,20)
+```
+
 |下载预训练模型
 |------------------
 | [DOWNLOAD 370MB](https://drive.google.com/file/d/133ERymhZejMj3aKwJLcLadMLUy0cw43w/view?usp=sharing) --使用的是此仓库的```datas/train.txt```数据集
