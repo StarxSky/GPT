@@ -12,7 +12,6 @@
 ```
 >>> pip install torch torchvision //windows
 >>> pip install torch //Orther
->>> pip install jieba
 >>> pip install tqdm
 
 ```
@@ -23,7 +22,7 @@
 ```
 
 
-- 在这之前您需要预先将所要训练的数据提前放到```datas```目录下
+- 在这之前您需要预先将所要训练的数据提前放到```datas```目录下程序会自动匹配该目录下所有的```.txt```结尾的文本文件
 
 ```python
 #######功能实现代码：
