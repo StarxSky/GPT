@@ -14,7 +14,7 @@
 # 进度/News
 |进度
 |----------------------------------
-|增加测试版的BNNGPT-2模型（贝叶斯神经网络GPT模型） --2022/06/13
+|增加测试版的[BNNGPT-2](https://github.com/StarxSky/GPT/tree/main/BNNGPT)模型（贝叶斯神经网络GPT模型） --2022/06/13
 |新增web交互 Dash application: A nice web interface for the dialogue model (Author: [xiejiachen](https://github.com/xiejiachen)) --2022/04/08
 |增添了交互模式[CNGPT](https://github.com/StarxSky/GPT-2/tree/main/CNGPT) --2022/04/08
 |新增[CNGPT](https://github.com/StarxSky/GPT-2/tree/main/CNGPT)可以实现在中文数据集上运行GPT -- 2022/03/15
