@@ -1,21 +1,15 @@
-# 使用Pytorch构建的GPT-2训练中文语料(建议您使用前请仔细查看此文档，从而解决问题)
-![pytorch logo](https://avatars.githubusercontent.com/u/21003710?s=88&v=4)
+# 基于贝叶斯神经网络的GPT-Beta版本
+- 由于贝叶斯神经网络具有有效的避免过拟合的特点，于是我将BNN应用到GPT-2上进行测试
+- 但由于BNN的参数权重是具有随机性的所以，这个网络可能陷入局部的最优解，所以BNN应用到GPT-2上目前是测试版
+- 其性能有待后期优化
 
 
-# 建议在Colab上使用GPU跑代码
-![im](https://github.com/StarxSky/GPT-2/blob/main/%E7%AE%80%E4%BB%8B/pp.png?raw=true)
 
 ## 使用方法
 
 - 安装必要的包
 - Tips1:
-```
->>> pip install torch torchvision //windows
->>> pip install torch //Orther
->>> pip install tqdm
 
-```
-- Tips2(老少皆宜)
 
 ```
 >>> pip install -r requirments.txt
