@@ -6,7 +6,7 @@ from torch.distributions import Normal
 from torch.nn import functional
 from torch import nn
 
-from CNGPT.Core.Bayesian import bayesian_model
+from BNNGPT.Core.Bayesian import bayesian_model
 # 上下文注意力(因果注意力)
 class CausalSelfAttention(nn.Module):
     """
