@@ -1,8 +1,10 @@
-import torch
 import math
+import torch
 
-from torch.nn import functional
+
 from torch import nn
+from torch.nn import functional
+from Core.Function import NewGELUActivation
 
 # 上下文注意力(因果注意力)
 class CausalSelfAttention(nn.Module):
@@ -58,6 +60,9 @@ class GPT_Block(nn.Module):
             nn.Linear(config.n_embd, 4 * config.n_embd),
             nn.GELU(),
             nn.Linear(4 * config.n_embd, config.n_embd),
+            nn.Linear(config.n_embd,1000),
+            NewGELUActivation(),
+            nn.Linear(1000,config.n_embd),
             nn.Dropout(config.resid_pdrop),
         )
     def forward(self, x):
