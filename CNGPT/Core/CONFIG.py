@@ -82,7 +82,7 @@ class Trainer:
     def train(self):
         model, config = self.model, self.config # 导入模型以及其的配置
         raw_model = model.module if hasattr(self.model, "module") else model # 判断是否包含模型属性
-        optimizer = raw_model.configure_optimizers(config) # 给模型配置优化器
+        optimizer = torch.optim.AdamW(raw_model.parameters(),lr=0.001) # 给模型配置优化器 
 
         # 执行迭代的函数（将数据送入模型并计算损失）
         def run_epoch(split:str): # 判断是训练还是测试
