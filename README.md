@@ -47,8 +47,12 @@
 *  tensorflow-gpu==2.7.0
 *  torch
 
+# Test Results
+[Test]()
 
 # Link
+
+- [New GELU Activate Function](https://arxiv.org/abs/1606.08415)
 - [OpenAi-GPT-2](https://github.com/openai/gpt-2)
 
 
