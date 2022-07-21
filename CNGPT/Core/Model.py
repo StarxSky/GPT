@@ -97,7 +97,7 @@ class GPT_Model(nn.Module):
 
     def get_block_size(self):
         return self.block_size
-
+# ==============>>>>初始化权重<<<<=====================
     def _init_weights(self, module):
         if isinstance(module, (nn.Linear, nn.Embedding)):
             module.weight.data.normal_(mean=0.0, std=0.02)
@@ -106,57 +106,7 @@ class GPT_Model(nn.Module):
         elif isinstance(module, nn.LayerNorm):
             module.bias.data.zero_()
             module.weight.data.fill_(1.0)
-# ====================>>>>>>>配置优化器<<<<<<<<==========================
-    def configure_optimizers(self, train_config):
-        """
-        不幸的是，这个长函数正在做一些非常简单的事情并且非常具有防御性：
-         我们将模型的所有参数分成两个桶：那些将经历
-         正则化的权重衰减和不会的权重衰减（偏差和 layernorm/嵌入权重）。
-         然后我们返回 PyTorch 优化器对象。
-         """
-        # 将所有参数与那些将经历和不会经历正则化权重衰减的参数分开
-        decay = set() # 一个集合
-        no_decay = set() # 一个集合
 
-        whitelist_weight_modules = (torch.nn.Linear,) # 权重白名单
-        blacklist_weight_modules = (torch.nn.LayerNorm, torch.nn.Embedding) # 权重黑名单
-
-        for mn, m in self.named_modules():
-            for pn, p in m.named_parameters():
-                fpn = '%s.%s' % (mn, pn) if mn else pn  # 完整的参数名称
-
-                if pn.endswith('bias'):
-                    # 所有的bias都不会衰减
-                    no_decay.add(fpn)
-                elif pn.endswith('weight') and isinstance(m, whitelist_weight_modules):
-                    # weights of whitelist modules will be weight decayed
-                    decay.add(fpn)
-                elif pn.endswith('weight') and isinstance(m, blacklist_weight_modules):
-                    # weights of blacklist modules will NOT be weight decayed
-                    no_decay.add(fpn)
-
-        # 特殊情况下，根 GPT 模块中的位置嵌入参数未衰减
-        no_decay.add('pos_emb')
-
-        # 验证我们是否考虑了每个参数
-        参数字典 = {pn: p for pn, p in self.named_parameters()}
-        inter_params = decay & no_decay
-        union_params = decay | no_decay
-        assert len(inter_params) == 0, "parameters %s made it into both decay/no_decay sets!" % (str(inter_params),)
-        assert len(
-            参数字典.keys() - union_params) == 0, "parameters %s were not separated into either decay/no_decay set!" \
-                                                    % (str(参数字典.keys() - union_params),)
-
-        # 创建pytorch优化器的一个对象
-        optim_groups = [
-            {"params": [参数字典[pn] for pn in sorted(list(decay))], "weight_decay": train_config.weight_decay},
-            {"params": [参数字典[pn] for pn in sorted(list(no_decay))], "weight_decay": 0.0},
-        ]
-        # build the optimizer
-
-        optimizer = torch.optim.AdamW(optim_groups, lr=train_config.learning_rate, betas=train_config.betas)
-
-        return optimizer
 # ===============>>>>>前向传播<<<<<<<<=================
     def forward(self, idx, targets=None):
         b, t = idx.size()
