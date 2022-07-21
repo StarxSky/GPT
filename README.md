@@ -48,7 +48,7 @@
 *  torch
 
 # Test Results
-[Test]()
+![Test]()
 
 # Link
 
