@@ -48,7 +48,7 @@
 *  torch
 
 # Test Results
-![Test]()
+![Test](https://github.com/StarxSky/GPT/blob/main/%E7%AE%80%E4%BB%8B/loss.jpg)
 
 # Link
 
